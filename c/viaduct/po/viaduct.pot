@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 1999-10-18 17:08+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+# main.c:141:				(void) fprintf( stderr, "required: %s [-s <src>|-p <port>] -d <dest>\n", program_name);
+msgid "required:"
+msgstr ""
+
+msgid "dest"
+msgstr ""
+# main.c:168:				(void) fprintf(stderr, "%s [-vvv] [-ae] -d <dest> [-s <src>|-p <port>]\n", program_name);
+# main.c:171:				(void) fprintf(stderr, "\t-p\t\t<port>\tport\n");
+msgid "port"
+msgstr ""
+
+msgid "src"
+msgstr ""
+
+# main.c:169:				(void) fprintf(stderr, "\t-a\t\tshow all\n");
+msgid "show all"
+msgstr ""
+
+# main.c:170:				(void) fprintf(stderr, "\t-d\t\t<dest>\tdestination\n");
+msgid "destination"
+msgstr ""
+
+# main.c:172:				(void) fprintf(stderr, "\t-e\t\tunknown\n");
+msgid "unknown"
+msgstr ""
+
+# main.c:173:				(void) fprintf(stderr, "\t-s\t\t<src>\tsource\n");
+msgid "source"
+msgstr ""
+
+# main.c:174:				(void) fprintf(stderr, "\t-t\t\t<time>\ttime interval\n");
+msgid "time interval"
+msgstr ""
+
+# main.c:175:				(void) fprintf(stderr, "\t-v\t\tverbose\n");
+msgid "verbose"
+msgstr ""
+
+# main.c:176:				(void) fprintf(stderr, "\t-vv\t\textra verbose\n");
+msgid "extra verbose"
+msgstr ""
+
+# main.c:177:				(void) fprintf(stderr, "\t-vvv\t\teven more extra verbose\n");
+msgid "even more extra verbose"
+msgstr ""
+
+# serial/serial.c:62:								sprintf( errmsg, "Error opening: %s", dev);
+msgid "Error opening: "
+msgstr ""
+
+# tap.c:55:				debug( 2, "tap open");
+msgid "tap open"
+msgstr ""
+
+# timer.c:80:				debugmsg = "interval set";
+msgid "interval set"
+msgstr ""
+
+# timer.c:93:				debug( 9,"thread created");
+msgid "thread created"
+msgstr ""
+
+# main.c:88:																								debug( 1, "chardev dest");
+msgid "chardev dest"
+msgstr ""
+
+# main.c:111:																								debug( 1, "chardev src");
+msgid "chardev src"
+msgstr ""
+
+# main.c:122:																debug( 9, "timer");
+msgid "timer"
+msgstr ""
+
+# serial/serial.c:97:				debug( 0, "No serial component installed");
+msgid "No serial component installed"
+msgstr ""
+
+# socket/bind.c:55:				debug( 9, "socket");
+msgid "socket"
+msgstr ""
+
+# socket/bind.c:70:				debug( 9, "bind");
+msgid "bind"
+msgstr ""
+
+# socket/bind.c:74:				debug( 9, "listen");
+msgid "listen"
+msgstr ""
+
+# socket/bind.c:77:								debug(1, "accept");
+msgid "accept"
+msgstr ""
+
+# socket/getby.c:47:								debug( 1, "ERROR inet_aton()");
+msgid "ERROR inet_aton()"
+msgstr ""
+
+# socket/getby.c:52:								debug( 1, "PASSED");
+msgid "PASSED"
+msgstr ""
+
+# socket/getby.c:56:				debug( 1, "ERROR passed through");
+msgid "ERROR passed through"
+msgstr ""
+
+# socket/getby.c:76:								debug( 10, "inet_aton false");
+msgid "inet_aton false"
+msgstr ""
+
+# socket/getby.c:80:				debug( 9, "Anything happen?");
+msgid "Anything happen?"
+msgstr ""
+
+# main.c:93:																				broke("No such file or directory");
+msgid "No such file or directory"
+msgstr ""
+
+# socket/bind.c:54:								broke("no socket");
+msgid "no socket"
+msgstr ""
+
+# socket/bind.c:69:								broke("no bind");
+msgid "no bind"
+msgstr ""
+
+# socket/bind.c:73:								broke("no listen");
+msgid "no listen"
+msgstr ""
+
+# socket/t_socket.h:61:    broke ("Hmalloc failed");
+msgid "Hmalloc failed"
+msgstr ""
+
+# socket/getby.c:78:				if( !hosten) broke( "Host lookup failed!");
+msgid "Host lookup failed"
+msgstr ""
+
+# socket/getby.c:100:								if( num) broke( "Eh? It's an address, not an IP number"); 
+msgid "Eh? It's an address, not an IP number"
+msgstr ""
+

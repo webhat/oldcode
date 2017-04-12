@@ -1,0 +1,51 @@
+GNU gdb 4.18
+Copyright 1998 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB.  Type "show warranty" for details.
+This GDB was configured as "i386-mandrake-linux"...
+(gdb) run
+Starting program: /usr/local/bin/pike6.132 
+Pike v0.6 release 132 running Hilfe v2.0 (Incremental Pike Frontend)
+> object BF = Blowfish.blowz("123456789");
+Result: object
+> BF->decrypt("123456789");
+Result: "\351*h\36us\226J\341""6o\331Hh\34\b"
+> BF->decrypt("12345678");
+Result: "\351*h\36us\226J\341""6o\331Hh\34\b"
+> object BF = Blowfish.blowz("12345678");
+Result: object
+> BF->decrypt("12345678");
+Result: "\351*h\36us\226J)\23,Ucw\24\217-\232""2\276\374\265\242\233\330t\310\276\2\375;5S({t\203\213\356m\20\305q\263/c\332 \302\275\367!\273\261@F\275R\31\1\333\353d\226\204'\327\303\27 \36\264""6\370I\212\255\245%Q\211\312 9`\265\301\362\310\26\223\230\204\314\370\265\370\331\33\267d\22d\204\3\370\273\265m\26\304\327\226\246E\361 \203\31\312Q\312\275\376\255\t\327\276W^\13S\303$%\361\27\242yO\375\377\370\34K\276\212\235\202""8]\264q\240\5\360V\312<\213\bP\261b$\245k\32\210\14\234\212""9\343j$\262\217m\352""0\333\204p\366\254\260d\206\274\17\22\277""85_\370\350\246""3\247)\317\231\310N\37\b\360A\36\b\364M\37\b|O\37\b|O\37\b\311"
+> BF->decrypt("123456789");
+Result: "\351*h\36us\226J)\23,Ucw\24\217-\232""2\276\374\265\242\233\330t\310\276\2\375;5S({t\203\213\356m\20\305q\263/c\332 \302\275\367!\273\261@F\275R\31\1\333\353d\226\204'\327\303\27 \36\264""6\370I\212\255\245%Q\211\312 9`\265\301\362\310\26\223\230\204\314\370\265\370\331\33\267d\22d\204\3\370\273\265m\26\304\327\226\246E\361 \203\31\312Q\312\275\376\255\t\327\276W^\13S\303$%\361\27\242yO\375\377\370\34K\276\212\235\202""8]\264q\240\5\360V\312<\213\bP\261b$\245k\32\210\14\234\212""9\343j$\262\217m\352""0\333\204p\366\254\260d\206\274\17\22\277""85_\370\350\246""3\247)\317\231\310N\37\b"
+> dump
+BF             :object
+> new
+> object BF = Blowfish.blowz("12345678");
+Result: object
+> BF->decrypt("123456789");
+
+Program received signal SIGSEGV, Segmentation fault.
+0x402e087e in BF_ecb_encrypt (in=0x81f13b0 "123456789", 
+    out=0x6e697274 <Address 0x6e697274 out of bounds>, ks=0x81e42f8, encrypt=0)
+    at /usr/src/cvs/idonex/Pike/0.6/src/modules/Blowfish/c/bf_ecb.c:91
+91		l=d[0]; l2n(l,out);
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /usr/local/bin/pike6.132 
+Pike v0.6 release 132 running Hilfe v2.0 (Incremental Pike Frontend)
+> object BF = Blowfish.blowz("123456789");
+Result: object
+> BF->decrypt("123456789");
+
+Program received signal SIGSEGV, Segmentation fault.
+0x402e087e in BF_ecb_encrypt (in=0x81f4420 "123456789", 
+    out=0x360035 <Address 0x360035 out of bounds>, ks=0x81f1d00, encrypt=0)
+    at /usr/src/cvs/idonex/Pike/0.6/src/modules/Blowfish/c/bf_ecb.c:91
+91		l=d[0]; l2n(l,out);
+(gdb) 
+

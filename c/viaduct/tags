@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/darren@hiebert.com/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://darren.hiebert.com/ctags/	/official site/
+!_TAG_PROGRAM_VERSION	3.2	/with C, C++, Eiffel, Fortran, and Java  support/
+ALL_INTERFACES	main.h	30;"	d
+BSD	headers.h	28;"	d
+CVSVERSION	main.c	19;"	d	file:
+ENABLE_NLS	acconfig.h	1;"	d
+HAVE_CATGETS	acconfig.h	2;"	d
+HAVE_CONFIG_H	headers.h	20;"	d
+HAVE_GETTEXT	acconfig.h	3;"	d
+HAVE_LC_MESSAGES	acconfig.h	4;"	d
+HAVE_MAIN_H	headers.h	22;"	d
+HAVE_MAIN_H	main.c	27;"	d	file:
+HAVE_MAIN_H	main.h	22;"	d
+HAVE_STPCPY	acconfig.h	5;"	d
+HAVE_TAO_H	tao.h	58;"	d
+LINUX	headers.h	27;"	d
+POSIXLY_CORRECT	popt.c	38;"	d	file:
+RAND	headers.h	36;"	d
+RAND	headers.h	39;"	d
+SOLARIS	headers.h	26;"	d
+SRAND	headers.h	35;"	d
+SRAND	headers.h	38;"	d
+UCHAR	headers.h	45;"	d
+UINT	headers.h	44;"	d
+UINT	tao.h	26;"	d
+ULONG	headers.h	43;"	d
+USHORT	headers.h	42;"	d
+_MIT_POSIX_THREADS	headers.h	31;"	d
+_MIT_POSIX_THREADS	timer.c	36;"	d	file:
+addr	tao.h	/^								} addr;$/;"	m	union:tao_opt::com
+broke	main.c	/^int broke ( char* body) {$/;"	f
+chardev	tap.c	/^int chardev( int fd ) {$/;"	f
+com	tao.h	/^				union com {$/;"	u	struct:tao_opt
+debug	main.c	/^int debug ( int lvl, char* body) {$/;"	f
+debugmsg	timer.c	/^char *debugmsg;$/;"	v
+destfd	main.c	/^volatile int destfd;$/;"	v
+dst	tao.h	/^				} src, dst;$/;"	m	struct:tao_opt
+dstfd	tao.h	/^				volatile int dstfd;$/;"	m	struct:tao_opt
+file	tao.h	/^								char *file;$/;"	m	union:tao_opt::com
+file	tap.c	/^int file( char *name ) {$/;"	f
+host	tao.h	/^												THOST *host;	\/* src host data *\/$/;"	m	struct:tao_opt::com::<anonymous>
+main	main.c	/^int main ( int argc, char **argv) {$/;"	f
+main	test.c	/^int main( int argc, char *argv[]) {$/;"	f
+port	tao.h	/^												TPORT *port;	\/* src port data *\/$/;"	m	struct:tao_opt::com::<anonymous>
+process_args	popt.c	/^void process_args( int argc, char **argv, tao_opt *ret) {$/;"	f
+program_name	main.h	/^char *program_name;$/;"	v
+ser	tao.h	/^				UINT ser;	\/* 0 = ignore, (in\/output handled differently)$/;"	m	struct:tao_opt
+src	tao.h	/^				} src, dst;$/;"	m	struct:tao_opt
+srcfd	main.c	/^volatile int srcfd;$/;"	v
+srcfd	tao.h	/^				volatile int srcfd;$/;"	m	struct:tao_opt
+tao_opt	tao.h	/^typedef struct tao_opt {$/;"	s
+tao_opt	tao.h	/^} tao_opt;$/;"	t
+tap	tap.c	/^int tap( int fd ) {$/;"	f
+test	timer.c	/^void test( void * args ) {$/;"	f
+timeout	tao.h	/^				volatile int timeout;$/;"	m	struct:tao_opt
+timer	timer.c	/^int timer ( int interval ) {$/;"	f
+tmp	popt.c	/^char * tmp;$/;"	v
+usage	main.c	/^void usage(void) {$/;"	f
+verbose	main.h	/^USHORT verbose;$/;"	v
+verbose	tao.h	/^				volatile int verbose;	\/* This can be redefined by any thread. *\/$/;"	m	struct:tao_opt

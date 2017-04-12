@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/darren@hiebert.com/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://darren.hiebert.com/ctags/	/official site/
+!_TAG_PROGRAM_VERSION	3.2	/with C, C++, Eiffel, Fortran, and Java  support/
+DEBUG	./include/global.h	31;"	d
+DEBUG	./include/global.h	33;"	d
+HAVE_DIRENT_H	./config.h	17;"	d
+HAVE_FCNTL_H	./config.h	20;"	d
+HAVE_GLOBALS_H	./include/global.h	21;"	d
+HAVE_STRSTR	./config.h	11;"	d
+HAVE_STRTOL	./config.h	14;"	d
+HAVE_UNISTD_H	./config.h	32;"	d
+PFUNC	./include/global.h	41;"	d
+PFUNC	./include/global.h	43;"	d
+RETSIGTYPE	./config.h	5;"	d
+STDC_HEADERS	./config.h	8;"	d
+cntr	./src/pids.c	/^int cntr;$/;"	v
+delim	./include/global.h	/^char *delim;$/;"	v
+form	./include/global.h	/^int form;$/;"	v
+kill_pidlist	./src/pids.c	/^int kill_pidlist( int sig) {$/;"	f
+list	./src/pids.c	/^char *list[65535];$/;"	v
+lookup_proc	./src/pids.c	/^int lookup_proc( char *name) {$/;"	f
+main	./src/pfunc.c	/^int main( int argc, char *argv[]) {$/;"	f
+testdir	./src/pids.c	/^int testdir( char *name, char *file) {$/;"	f
+usage	./src/pfunc.c	/^void usage(char *msg) {$/;"	f
+version	./include/global.h	/^const char *version;$/;"	v
+version	./src/version.c	/^const char *version = VERSION;$/;"	v
+write_pidlist	./src/pids.c	/^int write_pidlist( ) {$/;"	f

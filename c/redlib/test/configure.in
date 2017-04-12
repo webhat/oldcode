@@ -1,0 +1,8 @@
+AC_INIT(tja.c.in)
+POEKOE=poekoe
+AC_SUBST(POEKOE)
+
+AC_CHECK_LIB(mcrypt,mcrypt_free)
+AC_CHECK_LIB(red,ropen)
+
+AC_OUTPUT(tja.c Makefile)

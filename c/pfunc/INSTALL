@@ -1,0 +1,25 @@
+
+INSTALL:
+
+	You can install this in many ways, my advise is
+to run:
+
+	./configure
+	make
+
+Then as root:
+
+	make install
+
+	You can also run make local to add the program
+in your $HOME/bin directory.
+
+	If you have any problems with the installation,
+or can port this to a different platform, one I
+don't support, please send me your diffs or code
+so I can add them to the distro.
+
+	Please send clear bug reports.
+
+Copyright (C) 1997-2000  Daniel W. Crompton <redhat@rphh.org>
+

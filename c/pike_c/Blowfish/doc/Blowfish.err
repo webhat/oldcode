@@ -1,0 +1,807 @@
+execve("/usr/local/bin/pike6.132", ["pike6.132"], [/* 34 vars */]) = 0
+brk(0)                                  = 0x81be160
+open("/etc/ld.so.preload", O_RDONLY)    = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/i686/mmx/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/i686/mmx", 0xbffff3bc) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/i686/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/i686", 0xbffff3bc) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/mmx/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/mmx", 0xbffff3bc)  = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=1024, ...}) = 0
+open("/usr/X11R6/lib/i686/mmx/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/X11R6/lib/i686/mmx", 0xbffff3bc) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/i686/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/X11R6/lib/i686", 0xbffff3bc) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/mmx/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/X11R6/lib/mmx", 0xbffff3bc)  = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libdl.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/X11R6/lib", {st_mode=S_IFDIR|0755, st_size=2048, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=39375, ...}) = 0
+mmap(NULL, 39375, PROT_READ, MAP_PRIVATE, 3, 0) = 0x40015000
+close(3)                                = 0
+open("/lib/libdl.so.2", O_RDONLY)       = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=14169, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0$\31\0\000"..., 4096) = 4096
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x4001f000
+mmap(NULL, 11436, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40020000
+mprotect(0x40022000, 3244, PROT_NONE)   = 0
+mmap(0x40022000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x1000) = 0x40022000
+close(3)                                = 0
+open("/usr/local/lib/libnsl.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libnsl.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib/libnsl.so.1", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=101469, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\3607\0"..., 4096) = 4096
+mmap(NULL, 90984, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40023000
+mprotect(0x40036000, 13160, PROT_NONE)  = 0
+mmap(0x40036000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x12000) = 0x40036000
+mmap(0x40037000, 9064, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x40037000
+close(3)                                = 0
+open("/usr/local/lib/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libm.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib/libm.so.6", O_RDONLY)        = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=195091, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200=\0"..., 4096) = 4096
+mmap(NULL, 122632, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x4003a000
+mprotect(0x40057000, 3848, PROT_NONE)   = 0
+mmap(0x40057000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x1c000) = 0x40057000
+close(3)                                = 0
+open("/usr/local/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib/libpthread.so.0", O_RDONLY)  = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=79218, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\2405\0"..., 4096) = 4096
+mmap(NULL, 66788, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40058000
+mprotect(0x40061000, 29924, PROT_NONE)  = 0
+mmap(0x40061000, 32768, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x8000) = 0x40061000
+close(3)                                = 0
+open("/usr/local/lib/libcrypt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libcrypt.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib/libcrypt.so.1", O_RDONLY)    = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=25818, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\v\0"..., 4096) = 4096
+mmap(NULL, 183292, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40069000
+mprotect(0x4006e000, 162812, PROT_NONE) = 0
+mmap(0x4006e000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x4000) = 0x4006e000
+mmap(0x4006f000, 158716, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x4006f000
+close(3)                                = 0
+open("/usr/local/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib/libc.so.6", O_RDONLY)        = 3
+fstat(3, {st_mode=S_IFREG|0755, st_size=1286208, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0G\205\1"..., 4096) = 4096
+mmap(NULL, 1025692, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x40096000
+mprotect(0x40189000, 30364, PROT_NONE)  = 0
+mmap(0x40189000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0xf2000) = 0x40189000
+mmap(0x4018d000, 13980, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x4018d000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40191000
+mprotect(0x40096000, 995328, PROT_READ|PROT_WRITE) = 0
+mprotect(0x40096000, 995328, PROT_READ|PROT_EXEC) = 0
+munmap(0x40015000, 39375)               = 0
+personality(PER_LINUX)                  = 0
+getpid()                                = 17316
+getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+setrlimit(RLIMIT_STACK, {rlim_cur=2040*1024, rlim_max=RLIM_INFINITY}) = 0
+getpid()                                = 17316
+uname({sys="Linux", node="britney-spears.admin.lion-access.net", ...}) = 0
+rt_sigaction(SIGRT_0, {0x4005eaa4, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x4005e62c, [], 0}, NULL, 8) = 0
+rt_sigaction(SIGRT_2, {0x4005eb2e, [], 0}, NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [RT_0], NULL, 8) = 0
+brk(0)                                  = 0x81be160
+brk(0x81be190)                          = 0x81be190
+brk(0x81bf000)                          = 0x81bf000
+socketpair(PF_UNIX, SOCK_STREAM, 0, [3, 4]) = 0
+fcntl(3, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+fcntl(4, F_SETFL, O_RDONLY|O_NONBLOCK)  = 0
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+fcntl(4, F_SETFD, FD_CLOEXEC)           = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=2040*1024, rlim_max=RLIM_INFINITY}) = 0
+getrlimit(RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=1024}) = 0
+setrlimit(RLIMIT_NOFILE, {rlim_cur=1024, rlim_max=1024}) = 0
+gettimeofday({951392098, 588125}, NULL) = 0
+brk(0x81c1000)                          = 0x81c1000
+mmap(NULL, 800000, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x40192000
+mmap(NULL, 400000, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x40256000
+gettimeofday({951392098, 743320}, NULL) = 0
+brk(0x81c2000)                          = 0x81c2000
+brk(0x81c3000)                          = 0x81c3000
+gettimeofday({951392098, 744389}, NULL) = 0
+brk(0x81c4000)                          = 0x81c4000
+brk(0x81c5000)                          = 0x81c5000
+gettimeofday({951392098, 744998}, NULL) = 0
+brk(0x81c6000)                          = 0x81c6000
+brk(0x81c7000)                          = 0x81c7000
+gettimeofday({951392098, 745687}, NULL) = 0
+brk(0x81c8000)                          = 0x81c8000
+gettimeofday({951392098, 746097}, NULL) = 0
+gettimeofday({951392098, 746358}, NULL) = 0
+gettimeofday({951392098, 746561}, NULL) = 0
+gettimeofday({951392098, 746779}, NULL) = 0
+gettimeofday({951392098, 748138}, NULL) = 0
+brk(0x81c9000)                          = 0x81c9000
+rt_sigaction(SIGCHLD, {0x4005f0ec, ~[], SA_INTERRUPT}, NULL, 8) = 0
+rt_sigaction(SIGPIPE, {SIG_IGN}, NULL, 8) = 0
+gettimeofday({951392098, 750551}, NULL) = 0
+brk(0x81ca000)                          = 0x81ca000
+brk(0x81cb000)                          = 0x81cb000
+brk(0x81cc000)                          = 0x81cc000
+gettimeofday({951392098, 751638}, NULL) = 0
+gettimeofday({951392098, 751972}, NULL) = 0
+fcntl(0, F_SETFD, FD_CLOEXEC)           = 0
+fcntl(1, F_SETFD, FD_CLOEXEC)           = 0
+fcntl(2, F_SETFD, FD_CLOEXEC)           = 0
+gettimeofday({951392098, 752667}, NULL) = 0
+brk(0x81cd000)                          = 0x81cd000
+gettimeofday({951392098, 753354}, NULL) = 0
+brk(0x81ce000)                          = 0x81ce000
+brk(0x81cf000)                          = 0x81cf000
+gettimeofday({951392098, 754221}, NULL) = 0
+gettimeofday({951392098, 754901}, NULL) = 0
+gettimeofday({951392098, 755418}, NULL) = 0
+gettimeofday({951392098, 788496}, NULL) = 0
+gettimeofday({951392098, 788876}, NULL) = 0
+brk(0x81d1000)                          = 0x81d1000
+gettimeofday({951392098, 792713}, NULL) = 0
+open("/usr/local/lib/pike/master.pike.o", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/pike/master.pike", O_RDONLY|O_LARGEFILE) = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=25809, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40015000
+fstat(5, {st_mode=S_IFREG|0644, st_size=25809, ...}) = 0
+_llseek(5, 24576, [24576], SEEK_SET)    = 0
+read(5, "ram(tmp))\n\t\tif(tmp=describe_prog"..., 1233) = 1233
+_llseek(5, 0, [0], SEEK_SET)            = 0
+brk(0x81d8000)                          = 0x81d8000
+read(5, "/* $Id: master.pike.in,v 1.41 20"..., 24576) = 24576
+read(5, "ram(tmp))\n\t\tif(tmp=describe_prog"..., 4096) = 1233
+close(5)                                = 0
+munmap(0x40015000, 4096)                = 0
+brk(0x81da000)                          = 0x81da000
+brk(0x81de000)                          = 0x81de000
+brk(0x81e6000)                          = 0x81e6000
+gettimeofday({951392098, 963396}, NULL) = 0
+gettimeofday({951392099, 28913}, NULL)  = 0
+gettimeofday({951392099, 31130}, NULL)  = 0
+gettimeofday({951392099, 31366}, NULL)  = 0
+brk(0x81e7000)                          = 0x81e7000
+gettimeofday({951392099, 45678}, NULL)  = 0
+brk(0x81e9000)                          = 0x81e9000
+brk(0x81eb000)                          = 0x81eb000
+brk(0x81ed000)                          = 0x81ed000
+brk(0x81f1000)                          = 0x81f1000
+brk(0x81f3000)                          = 0x81f3000
+gettimeofday({951392099, 143305}, NULL) = 0
+getpid()                                = 17316
+gettimeofday({951392099, 161392}, NULL) = 0
+gettimeofday({951392099, 164887}, NULL) = 0
+open("/dev/null", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = -1 ENOTDIR (Not a directory)
+open("/usr/local/lib/pike/modules", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/lib/pike/modules", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392590, f_files=128520, f_ffree=126089, f_namelen=255}) = 0
+getdents(5, /* 34 entries */, 3391)     = 736
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+gettimeofday({951392099, 205205}, NULL) = 0
+gettimeofday({951392099, 205617}, NULL) = 0
+gettimeofday({951392099, 205961}, NULL) = 0
+gettimeofday({951392099, 206306}, NULL) = 0
+gettimeofday({951392099, 206656}, NULL) = 0
+open("/usr/local/share/pike/modules", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/share/pike/modules", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392590, f_files=128520, f_ffree=126089, f_namelen=255}) = 0
+getdents(5, /* 26 entries */, 3391)     = 600
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+stat("/usr/local/share/pike/modules/Tools.pmod", {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+gettimeofday({951392099, 213294}, NULL) = 0
+open("/usr/local/share/pike/modules/Tools.pmod", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/share/pike/modules/Tools.pmod", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392590, f_files=128520, f_ffree=126089, f_namelen=255}) = 0
+getdents(5, /* 7 entries */, 3391)      = 132
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+gettimeofday({951392099, 239905}, NULL) = 0
+gettimeofday({951392099, 240289}, NULL) = 0
+gettimeofday({951392099, 240643}, NULL) = 0
+gettimeofday({951392099, 240995}, NULL) = 0
+gettimeofday({951392099, 241481}, NULL) = 0
+stat("/usr/local/share/pike/modules/Tools.pmod/Hilfe.pmod", {st_mode=S_IFREG|0664, st_size=11808, ...}) = 0
+gettimeofday({951392099, 242272}, NULL) = 0
+stat("/usr/local/share/pike/modules/Tools.pmod/Hilfe.pmod", {st_mode=S_IFREG|0664, st_size=11808, ...}) = 0
+gettimeofday({951392099, 242833}, NULL) = 0
+open("/usr/local/share/pike/modules/Tools.pmod/Hilfe.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8213000)                          = 0x8213000
+read(5, "class Evaluator\n{\n/* Incremental"..., 65536) = 11808
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+close(5)                                = 0
+gettimeofday({951392099, 306560}, NULL) = 0
+open("/usr/local/lib/pike/include", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/lib/pike/include", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392580, f_files=128520, f_ffree=126085, f_namelen=255}) = 0
+getdents(5, /* 2 entries */, 3391)      = 28
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+gettimeofday({951392099, 338874}, NULL) = 0
+open("/usr/local/share/pike/include", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/share/pike/include", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392580, f_files=128520, f_ffree=126085, f_namelen=255}) = 0
+getdents(5, /* 15 entries */, 3391)     = 292
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+stat("/usr/local/share/pike/include/simulate.h", {st_mode=S_IFREG|0664, st_size=136, ...}) = 0
+open("/usr/local/share/pike/include/simulate.h", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "#define list multiset\n#define pe"..., 65536) = 136
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+close(5)                                = 0
+gettimeofday({951392099, 427587}, NULL) = 0
+gettimeofday({951392099, 427899}, NULL) = 0
+stat("/usr/local/share/pike/include/stdio.h", {st_mode=S_IFREG|0664, st_size=14, ...}) = 0
+open("/usr/local/share/pike/include/stdio.h", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "import Stdio;\n", 65536)       = 14
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+close(5)                                = 0
+gettimeofday({951392099, 485153}, NULL) = 0
+gettimeofday({951392099, 485465}, NULL) = 0
+stat("/usr/local/share/pike/include/string.h", {st_mode=S_IFREG|0664, st_size=15, ...}) = 0
+open("/usr/local/share/pike/include/string.h", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "import String;\n", 65536)      = 15
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+close(5)                                = 0
+gettimeofday({951392099, 511111}, NULL) = 0
+gettimeofday({951392099, 511427}, NULL) = 0
+stat("/usr/local/share/pike/include/getopt.h", {st_mode=S_IFREG|0664, st_size=15, ...}) = 0
+open("/usr/local/share/pike/include/getopt.h", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "import Getopt;\n", 65536)      = 15
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+gettimeofday({951392099, 542701}, NULL) = 0
+gettimeofday({951392099, 542990}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392099, 544033}, NULL) = 0
+gettimeofday({951392099, 545023}, NULL) = 0
+gettimeofday({951392099, 545716}, NULL) = 0
+gettimeofday({951392099, 546388}, NULL) = 0
+gettimeofday({951392099, 546729}, NULL) = 0
+gettimeofday({951392099, 547057}, NULL) = 0
+stat("/usr/local/share/pike/modules/Simulate.pmod", {st_mode=S_IFREG|0664, st_size=1378, ...}) = 0
+gettimeofday({951392099, 548175}, NULL) = 0
+stat("/usr/local/share/pike/modules/Simulate.pmod", {st_mode=S_IFREG|0664, st_size=1378, ...}) = 0
+gettimeofday({951392099, 548736}, NULL) = 0
+open("/usr/local/share/pike/modules/Simulate.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "inherit Array;\ninherit Stdio;\nin"..., 65536) = 1378
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+gettimeofday({951392099, 581763}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392099, 582662}, NULL) = 0
+gettimeofday({951392099, 584104}, NULL) = 0
+gettimeofday({951392099, 585098}, NULL) = 0
+gettimeofday({951392099, 585918}, NULL) = 0
+gettimeofday({951392099, 586249}, NULL) = 0
+gettimeofday({951392099, 586581}, NULL) = 0
+stat("/usr/local/share/pike/modules/Array.pmod", {st_mode=S_IFREG|0664, st_size=11320, ...}) = 0
+gettimeofday({951392099, 587826}, NULL) = 0
+stat("/usr/local/share/pike/modules/Array.pmod", {st_mode=S_IFREG|0664, st_size=11320, ...}) = 0
+gettimeofday({951392099, 588386}, NULL) = 0
+open("/usr/local/share/pike/modules/Array.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8212000)                          = 0x8212000
+read(5, "#define error(X) throw( ({ (X), "..., 65536) = 11320
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+brk(0x81f4000)                          = 0x81f4000
+brk(0x81f8000)                          = 0x81f8000
+gettimeofday({951392100, 437965}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392100, 438742}, NULL) = 0
+gettimeofday({951392100, 439875}, NULL) = 0
+gettimeofday({951392100, 440819}, NULL) = 0
+gettimeofday({951392100, 441751}, NULL) = 0
+gettimeofday({951392100, 442081}, NULL) = 0
+gettimeofday({951392100, 442403}, NULL) = 0
+stat("/usr/local/share/pike/modules/__builtin.pmod", {st_mode=S_IFREG|0664, st_size=33, ...}) = 0
+gettimeofday({951392100, 443981}, NULL) = 0
+stat("/usr/local/share/pike/modules/__builtin.pmod", {st_mode=S_IFREG|0664, st_size=33, ...}) = 0
+gettimeofday({951392100, 444599}, NULL) = 0
+open("/usr/local/share/pike/modules/__builtin.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8218000)                          = 0x8218000
+read(5, "inherit _static_modules.Builtin;"..., 65536) = 33
+read(5, "", 65536)                      = 0
+brk(0x81f2000)                          = 0x81f2000
+gettimeofday({951392100, 470891}, NULL) = 0
+close(5)                                = 0
+brk(0x81f4000)                          = 0x81f4000
+brk(0x81f6000)                          = 0x81f6000
+brk(0x81f8000)                          = 0x81f8000
+brk(0x81fa000)                          = 0x81fa000
+brk(0x81fc000)                          = 0x81fc000
+brk(0x81fe000)                          = 0x81fe000
+brk(0x8200000)                          = 0x8200000
+brk(0x8202000)                          = 0x8202000
+gettimeofday({951392100, 537172}, NULL) = 0
+gettimeofday({951392100, 538586}, NULL) = 0
+gettimeofday({951392100, 539417}, NULL) = 0
+gettimeofday({951392100, 540237}, NULL) = 0
+gettimeofday({951392100, 540575}, NULL) = 0
+gettimeofday({951392100, 540931}, NULL) = 0
+stat("/usr/local/share/pike/modules/Stdio.pmod", {st_mode=S_IFREG|0664, st_size=12922, ...}) = 0
+gettimeofday({951392100, 542171}, NULL) = 0
+stat("/usr/local/share/pike/modules/Stdio.pmod", {st_mode=S_IFREG|0664, st_size=12922, ...}) = 0
+gettimeofday({951392100, 542741}, NULL) = 0
+open("/usr/local/share/pike/modules/Stdio.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8222000)                          = 0x8222000
+read(5, "// $Id: Stdio.pmod,v 1.39 1999/0"..., 65536) = 12922
+read(5, "", 65536)                      = 0
+close(5)                                = 0
+gettimeofday({951392100, 572043}, NULL) = 0
+gettimeofday({951392100, 572340}, NULL) = 0
+stat("/usr/local/share/pike/include/string.h", {st_mode=S_IFREG|0664, st_size=15, ...}) = 0
+open("/usr/local/share/pike/include/string.h", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+read(5, "import String;\n", 65536)      = 15
+read(5, "", 65536)                      = 0
+close(5)                                = 0
+gettimeofday({951392100, 574144}, NULL) = 0
+stat("/usr/local/lib/pike/modules/files.pmod", {st_mode=S_IFREG|0755, st_size=31, ...}) = 0
+gettimeofday({951392100, 575603}, NULL) = 0
+stat("/usr/local/lib/pike/modules/files.pmod", {st_mode=S_IFREG|0755, st_size=31, ...}) = 0
+gettimeofday({951392100, 576169}, NULL) = 0
+open("/usr/local/lib/pike/modules/files.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+read(5, "inherit _static_modules.files;\n", 65536) = 31
+read(5, "", 65536)                      = 0
+gettimeofday({951392100, 616485}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392100, 621366}, NULL) = 0
+stat("/usr/local/lib/pike/modules/system.pmod", {st_mode=S_IFREG|0755, st_size=32, ...}) = 0
+gettimeofday({951392100, 622855}, NULL) = 0
+stat("/usr/local/lib/pike/modules/system.pmod", {st_mode=S_IFREG|0755, st_size=32, ...}) = 0
+gettimeofday({951392100, 623421}, NULL) = 0
+open("/usr/local/lib/pike/modules/system.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8242000)                          = 0x8242000
+read(5, "inherit _static_modules.system;\n", 65536) = 32
+read(5, "", 65536)                      = 0
+brk(0x8221000)                          = 0x8221000
+gettimeofday({951392100, 661475}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392100, 663626}, NULL) = 0
+gettimeofday({951392100, 664561}, NULL) = 0
+gettimeofday({951392100, 665708}, NULL) = 0
+time(NULL)                              = 951392100
+gettimeofday({951392100, 667803}, NULL) = 0
+gettimeofday({951392100, 668782}, NULL) = 0
+gettimeofday({951392100, 669128}, NULL) = 0
+gettimeofday({951392100, 669459}, NULL) = 0
+stat("/usr/local/share/pike/modules/String.pmod", {st_mode=S_IFREG|0664, st_size=2517, ...}) = 0
+gettimeofday({951392100, 670844}, NULL) = 0
+stat("/usr/local/share/pike/modules/String.pmod", {st_mode=S_IFREG|0664, st_size=2517, ...}) = 0
+gettimeofday({951392100, 671408}, NULL) = 0
+open("/usr/local/share/pike/modules/String.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x8241000)                          = 0x8241000
+read(5, "#define BEGIN 32\n\n/*\n * Implode "..., 65536) = 2517
+read(5, "", 65536)                      = 0
+brk(0x8208000)                          = 0x8208000
+gettimeofday({951392100, 685204}, NULL) = 0
+gettimeofday({951392100, 686596}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392100, 704501}, NULL) = 0
+gettimeofday({951392100, 709268}, NULL) = 0
+gettimeofday({951392100, 710446}, NULL) = 0
+gettimeofday({951392100, 711410}, NULL) = 0
+gettimeofday({951392100, 712363}, NULL) = 0
+gettimeofday({951392100, 712698}, NULL) = 0
+gettimeofday({951392100, 713027}, NULL) = 0
+gettimeofday({951392100, 714145}, NULL) = 0
+gettimeofday({951392100, 715105}, NULL) = 0
+gettimeofday({951392100, 716052}, NULL) = 0
+gettimeofday({951392100, 716380}, NULL) = 0
+gettimeofday({951392100, 716987}, NULL) = 0
+gettimeofday({951392100, 718120}, NULL) = 0
+gettimeofday({951392100, 719106}, NULL) = 0
+gettimeofday({951392100, 720058}, NULL) = 0
+gettimeofday({951392100, 720397}, NULL) = 0
+gettimeofday({951392100, 720729}, NULL) = 0
+gettimeofday({951392100, 721815}, NULL) = 0
+gettimeofday({951392100, 722766}, NULL) = 0
+gettimeofday({951392100, 723930}, NULL) = 0
+gettimeofday({951392100, 724334}, NULL) = 0
+gettimeofday({951392100, 727943}, NULL) = 0
+gettimeofday({951392100, 746357}, NULL) = 0
+brk(0x820a000)                          = 0x820a000
+gettimeofday({951392100, 780651}, NULL) = 0
+gettimeofday({951392100, 781695}, NULL) = 0
+gettimeofday({951392100, 782526}, NULL) = 0
+gettimeofday({951392100, 783346}, NULL) = 0
+gettimeofday({951392100, 784348}, NULL) = 0
+gettimeofday({951392100, 784859}, NULL) = 0
+stat("/usr/local/share/pike/modules/Process.pmod", {st_mode=S_IFREG|0664, st_size=5647, ...}) = 0
+gettimeofday({951392100, 786136}, NULL) = 0
+stat("/usr/local/share/pike/modules/Process.pmod", {st_mode=S_IFREG|0664, st_size=5647, ...}) = 0
+gettimeofday({951392100, 786740}, NULL) = 0
+open("/usr/local/share/pike/modules/Process.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x822a000)                          = 0x822a000
+read(5, "#define error(X) throw( ({ (X), "..., 65536) = 5647
+read(5, "", 65536)                      = 0
+brk(0x8208000)                          = 0x8208000
+brk(0x820a000)                          = 0x820a000
+gettimeofday({951392100, 809315}, NULL) = 0
+close(5)                                = 0
+gettimeofday({951392100, 814972}, NULL) = 0
+gettimeofday({951392100, 842311}, NULL) = 0
+gettimeofday({951392100, 843346}, NULL) = 0
+gettimeofday({951392100, 844437}, NULL) = 0
+gettimeofday({951392100, 845283}, NULL) = 0
+gettimeofday({951392100, 845618}, NULL) = 0
+stat("/usr/local/lib/pike/modules/Regexp.so", {st_mode=S_IFREG|0755, st_size=62777, ...}) = 0
+gettimeofday({951392100, 846816}, NULL) = 0
+gettimeofday({951392100, 847639}, NULL) = 0
+gettimeofday({951392100, 848463}, NULL) = 0
+stat("/usr/local/lib/pike/modules/Regexp.so", {st_mode=S_IFREG|0755, st_size=62777, ...}) = 0
+open("/usr/local/lib/pike/modules/Regexp.so", O_RDONLY) = 5
+fstat(5, {st_mode=S_IFREG|0755, st_size=62777, ...}) = 0
+read(5, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\v\0"..., 4096) = 4096
+mmap(NULL, 17848, PROT_READ|PROT_EXEC, MAP_PRIVATE, 5, 0) = 0x40015000
+mprotect(0x40019000, 1464, PROT_NONE)   = 0
+mmap(0x40019000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 5, 0x3000) = 0x40019000
+close(5)                                = 0
+gettimeofday({951392100, 886076}, NULL) = 0
+gettimeofday({951392100, 886300}, NULL) = 0
+gettimeofday({951392100, 933648}, NULL) = 0
+gettimeofday({951392100, 934786}, NULL) = 0
+gettimeofday({951392100, 935465}, NULL) = 0
+gettimeofday({951392100, 936128}, NULL) = 0
+gettimeofday({951392100, 936460}, NULL) = 0
+gettimeofday({951392100, 936794}, NULL) = 0
+stat("/usr/local/share/pike/modules/Getopt.pmod", {st_mode=S_IFREG|0664, st_size=5994, ...}) = 0
+gettimeofday({951392100, 937901}, NULL) = 0
+stat("/usr/local/share/pike/modules/Getopt.pmod", {st_mode=S_IFREG|0664, st_size=5994, ...}) = 0
+gettimeofday({951392100, 938487}, NULL) = 0
+open("/usr/local/share/pike/modules/Getopt.pmod", O_RDONLY|O_LARGEFILE) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+brk(0x822a000)                          = 0x822a000
+read(5, "//  startpid = (int)find_arg(arg"..., 65536) = 5994
+read(5, "", 65536)                      = 0
+brk(0x8209000)                          = 0x8209000
+gettimeofday({951392100, 965427}, NULL) = 0
+brk(0x820b000)                          = 0x820b000
+close(5)                                = 0
+gettimeofday({951392101, 24043}, NULL)  = 0
+gettimeofday({951392101, 25195}, NULL)  = 0
+gettimeofday({951392101, 26079}, NULL)  = 0
+gettimeofday({951392101, 26783}, NULL)  = 0
+gettimeofday({951392101, 27481}, NULL)  = 0
+gettimeofday({951392101, 27835}, NULL)  = 0
+stat("/usr/local/lib/pike/modules/readline.so", {st_mode=S_IFREG|0755, st_size=215070, ...}) = 0
+gettimeofday({951392101, 28909}, NULL)  = 0
+gettimeofday({951392101, 29601}, NULL)  = 0
+gettimeofday({951392101, 30320}, NULL)  = 0
+stat("/usr/local/lib/pike/modules/readline.so", {st_mode=S_IFREG|0755, st_size=215070, ...}) = 0
+open("/usr/local/lib/pike/modules/readline.so", O_RDONLY) = 5
+fstat(5, {st_mode=S_IFREG|0755, st_size=215070, ...}) = 0
+read(5, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300\2\1"..., 4096) = 4096
+mmap(NULL, 159208, PROT_READ|PROT_EXEC, MAP_PRIVATE, 5, 0) = 0x402b8000
+mprotect(0x402da000, 19944, PROT_NONE)  = 0
+mmap(0x402da000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 5, 0x21000) = 0x402da000
+close(5)                                = 0
+open("/usr/local/lib/libtermcap.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libtermcap.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libtermcap.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libtermcap.so.2", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=39375, ...}) = 0
+mmap(NULL, 39375, PROT_READ, MAP_PRIVATE, 5, 0) = 0x402df000
+close(5)                                = 0
+open("/lib/libtermcap.so.2", O_RDONLY)  = 5
+fstat(5, {st_mode=S_IFREG|0755, st_size=15290, ...}) = 0
+read(5, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0 \v\0\000"..., 4096) = 4096
+mmap(NULL, 14376, PROT_READ|PROT_EXEC, MAP_PRIVATE, 5, 0) = 0x4001a000
+mprotect(0x4001d000, 2088, PROT_NONE)   = 0
+mmap(0x4001d000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 5, 0x2000) = 0x4001d000
+close(5)                                = 0
+mprotect(0x402b8000, 139264, PROT_READ|PROT_WRITE) = 0
+mprotect(0x402b8000, 139264, PROT_READ|PROT_EXEC) = 0
+munmap(0x402df000, 39375)               = 0
+gettimeofday({951392101, 141471}, NULL) = 0
+gettimeofday({951392101, 142576}, NULL) = 0
+gettimeofday({951392101, 143604}, NULL) = 0
+write(1, "Pike v0.6 release 132 running Hi"..., 69Pike v0.6 release 132 running Hilfe v2.0 (Incremental Pike Frontend)
+) = 69
+open("/etc/termcap", O_RDONLY)          = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=627979, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x4001e000
+_llseek(5, 0, [0], SEEK_SET)            = 0
+read(5, "######## TERMINAL TYPE DESCRIPTI"..., 4096) = 4096
+read(5, "or their hardware\n# (notably DEC"..., 4096) = 4096
+read(5, "The terminal enquire string <u9>"..., 4096) = 4096
+read(5, "y and redistribute freely.\n# The"..., 4096) = 4096
+read(5, "ue=\\E[24m:\\\n\t:tc=klone+sgr:\n\n# F"..., 4096) = 4096
+read(5, "ines:\\\n\t:li#25:tc=pcansi:\npcansi"..., 4096) = 4096
+read(5, "%?%p1%{9}%>%t%p1%{10}%-%p\'a\'%+%c"..., 4096) = 4096
+read(5, "ec vt220 emulation with 43 lines"..., 4096) = 4096
+read(5, "220p\\221q\\222r\\223s\\224t\\225u\\22"..., 4096) = 4096
+read(5, " state (concept at beginning of "..., 4096) = 4096
+read(5, "=\\E[?7l:RI=\\E[%dC:SA=\\E[?7h:UP=\\"..., 4096) = 4096
+read(5, "ys\n# at the top of the keyboard."..., 4096) = 4096
+read(5, "r=\\EM:ta=^I:ue=\\E[24m:up=\\E[A:us"..., 4096) = 4096
+read(5, ":am:es:hs:mi:ms:xn:xo:\\\n\t:co#80:"..., 4096) = 4096
+read(5, "?%p2%t;4%;%?%p4%t;5%;%?%p1%p3%|%"..., 4096) = 4096
+read(5, "dded <rmam>/<smam> based on the "..., 4096) = 4096
+read(5, "tem vt340 terminal emulator 132c"..., 4096) = 4096
+read(5, ":K1=\\EOw:K2=\\EOy:K3=\\EOu:K4=\\EOq"..., 4096) = 4096
+_llseek(5, 0, [0], SEEK_SET)            = 0
+read(5, "######## TERMINAL TYPE DESCRIPTI"..., 4096) = 4096
+read(5, "or their hardware\n# (notably DEC"..., 4096) = 4096
+read(5, "The terminal enquire string <u9>"..., 4096) = 4096
+read(5, "y and redistribute freely.\n# The"..., 4096) = 4096
+read(5, "ue=\\E[24m:\\\n\t:tc=klone+sgr:\n\n# F"..., 4096) = 4096
+read(5, "ines:\\\n\t:li#25:tc=pcansi:\npcansi"..., 4096) = 4096
+read(5, "%?%p1%{9}%>%t%p1%{10}%-%p\'a\'%+%c"..., 4096) = 4096
+read(5, "ec vt220 emulation with 43 lines"..., 4096) = 4096
+read(5, "220p\\221q\\222r\\223s\\224t\\225u\\22"..., 4096) = 4096
+read(5, " state (concept at beginning of "..., 4096) = 4096
+read(5, "=\\E[?7l:RI=\\E[%dC:SA=\\E[?7h:UP=\\"..., 4096) = 4096
+read(5, "ys\n# at the top of the keyboard."..., 4096) = 4096
+read(5, "r=\\EM:ta=^I:ue=\\E[24m:up=\\E[A:us"..., 4096) = 4096
+read(5, ":am:es:hs:mi:ms:xn:xo:\\\n\t:co#80:"..., 4096) = 4096
+read(5, "?%p2%t;4%;%?%p4%t;5%;%?%p1%p3%|%"..., 4096) = 4096
+read(5, "dded <rmam>/<smam> based on the "..., 4096) = 4096
+read(5, "tem vt340 terminal emulator 132c"..., 4096) = 4096
+close(5)                                = 0
+munmap(0x4001e000, 4096)                = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TIOCSWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+stat("/etc/inputrc", {st_mode=S_IFREG|0644, st_size=700, ...}) = 0
+open("/etc/inputrc", O_RDONLY)          = 5
+read(5, "## Linux-Mandrake Configuration\n"..., 700) = 700
+close(5)                                = 0
+stat("/home/redhat/.inputrc", 0xbffff0a8) = -1 ENOENT (No such file or directory)
+rt_sigprocmask(SIG_BLOCK, [INT], [RT_0], 8) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TIOCSWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, SNDCTL_TMR_STOP, {B38400 opost isig -icanon -echo ...}) = 0
+rt_sigprocmask(SIG_SETMASK, [RT_0], NULL, 8) = 0
+rt_sigaction(SIGINT, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTERM, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGQUIT, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGALRM, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTSTP, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTTOU, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTTIN, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGWINCH, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x4001e000
+write(1, "> ", 2> )                       = 2
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "B", 1)                         = 1
+write(1, "B", 1B)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "l", 1)                         = 1
+write(1, "l", 1l)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "o", 1)                         = 1
+write(1, "o", 1o)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "w", 1)                         = 1
+write(1, "w", 1w)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "f", 1)                         = 1
+write(1, "f", 1f)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "i", 1)                         = 1
+write(1, "i", 1i)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "s", 1)                         = 1
+write(1, "s", 1s)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "h", 1)                         = 1
+write(1, "h", 1h)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, ".", 1)                         = 1
+write(1, ".", 1.)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "b", 1)                         = 1
+write(1, "b", 1b)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "l", 1)                         = 1
+write(1, "l", 1l)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "o", 1)                         = 1
+write(1, "o", 1o)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "w", 1)                         = 1
+write(1, "w", 1w)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "z", 1)                         = 1
+write(1, "z", 1z)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "(", 1)                         = 1
+write(1, "(", 1()                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "\"", 1)                        = 1
+write(1, "\"", 1")                       = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "q", 1)                         = 1
+write(1, "q", 1q)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "w", 1)                         = 1
+write(1, "w", 1w)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "e", 1)                         = 1
+write(1, "e", 1e)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "r", 1)                         = 1
+write(1, "r", 1r)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "t", 1)                         = 1
+write(1, "t", 1t)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "y", 1)                         = 1
+write(1, "y", 1y)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "u", 1)                         = 1
+write(1, "u", 1u)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "i", 1)                         = 1
+write(1, "i", 1i)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "\"", 1)                        = 1
+write(1, "\"", 1")                       = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, ")", 1)                         = 1
+write(1, ")", 1))                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, ";", 1)                         = 1
+write(1, ";", 1;)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "\r", 1)                        = 1
+write(1, "\n", 1
+)                       = 1
+rt_sigprocmask(SIG_BLOCK, [INT], [RT_0], 8) = 0
+ioctl(0, SNDCTL_TMR_STOP, {B38400 opost isig icanon echo ...}) = 0
+rt_sigprocmask(SIG_SETMASK, [RT_0], NULL, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGALRM, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTSTP, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTTOU, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTTIN, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGWINCH, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {0x4005f0ec, ~[], SA_INTERRUPT}, NULL, 8) = 0
+gettimeofday({951392120, 693576}, NULL) = 0
+gettimeofday({951392120, 695543}, NULL) = 0
+gettimeofday({951392120, 696024}, NULL) = 0
+open("/usr/local/lib/pike/modules", O_RDONLY|O_NONBLOCK|O_DIRECTORY) = 5
+fstat(5, {st_mode=S_IFDIR|0775, st_size=1024, ...}) = 0
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+statfs("/usr/local/lib/pike/modules", {f_type="EXT2_SUPER_MAGIC", f_bsize=1024, f_blocks=497667, f_bfree=392446, f_files=128520, f_ffree=126052, f_namelen=255}) = 0
+getdents(5, /* 34 entries */, 3391)     = 736
+getdents(5, /* 0 entries */, 3391)      = 0
+close(5)                                = 0
+gettimeofday({951392120, 698352}, NULL) = 0
+gettimeofday({951392120, 698736}, NULL) = 0
+gettimeofday({951392120, 699090}, NULL) = 0
+gettimeofday({951392120, 699452}, NULL) = 0
+stat("/usr/local/lib/pike/modules/Blowfish.so", {st_mode=S_IFREG|0755, st_size=68278, ...}) = 0
+gettimeofday({951392120, 700184}, NULL) = 0
+gettimeofday({951392120, 700550}, NULL) = 0
+gettimeofday({951392120, 700896}, NULL) = 0
+stat("/usr/local/lib/pike/modules/Blowfish.so", {st_mode=S_IFREG|0755, st_size=68278, ...}) = 0
+open("/usr/local/lib/pike/modules/Blowfish.so", O_RDONLY) = 5
+fstat(5, {st_mode=S_IFREG|0755, st_size=68278, ...}) = 0
+read(5, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\f\0"..., 4096) = 4096
+mmap(NULL, 21440, PROT_READ|PROT_EXEC, MAP_PRIVATE, 5, 0) = 0x402df000
+mprotect(0x402e2000, 9152, PROT_NONE)   = 0
+mmap(0x402e2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 5, 0x2000) = 0x402e2000
+mmap(0x402e4000, 960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x402e4000
+close(5)                                = 0
+open("/usr/local/lib/libz.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libz.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libz.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/X11R6/lib/libz.so.1", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY)      = 5
+fstat(5, {st_mode=S_IFREG|0644, st_size=39375, ...}) = 0
+mmap(NULL, 39375, PROT_READ, MAP_PRIVATE, 5, 0) = 0x402e5000
+close(5)                                = 0
+open("/usr/lib/libz.so.1", O_RDONLY)    = 5
+fstat(5, {st_mode=S_IFREG|0755, st_size=57686, ...}) = 0
+read(5, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\20\34\0"..., 4096) = 4096
+mmap(NULL, 52704, PROT_READ|PROT_EXEC, MAP_PRIVATE, 5, 0) = 0x402ef000
+mprotect(0x402fa000, 7648, PROT_NONE)   = 0
+mmap(0x402fa000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 5, 0xa000) = 0x402fa000
+close(5)                                = 0
+mprotect(0x402ef000, 45056, PROT_READ|PROT_WRITE) = 0
+mprotect(0x402ef000, 45056, PROT_READ|PROT_EXEC) = 0
+munmap(0x402e5000, 39375)               = 0
+gettimeofday({951392121, 80091}, NULL)  = 0
+gettimeofday({951392121, 80218}, NULL)  = 0
+write(1, "Result: object\n", 15Result: object
+)        = 15
+rt_sigaction(SIGINT, {SIG_DFL}, NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [INT], [RT_0], 8) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TIOCSWINSZ, {ws_row=24, ws_col=80, ws_xpixel=400, ws_ypixel=240}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(0, SNDCTL_TMR_STOP, {B38400 opost isig -icanon -echo ...}) = 0
+rt_sigprocmask(SIG_SETMASK, [RT_0], NULL, 8) = 0
+rt_sigaction(SIGINT, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTERM, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGQUIT, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGALRM, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTSTP, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTTOU, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGTTIN, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+rt_sigaction(SIGWINCH, {0x4005f0ec, [], 0}, {SIG_DFL}, 8) = 0
+write(1, "> ", 2> )                       = 2
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "q", 1)                         = 1
+write(1, "q", 1q)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "u", 1)                         = 1
+write(1, "u", 1u)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "i", 1)                         = 1
+write(1, "i", 1i)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "t", 1)                         = 1
+write(1, "t", 1t)                        = 1
+rt_sigprocmask(SIG_BLOCK, NULL, [RT_0], 8) = 0
+read(0, "\r", 1)                        = 1
+write(1, "\n", 1
+)                       = 1
+rt_sigprocmask(SIG_BLOCK, [INT], [RT_0], 8) = 0
+ioctl(0, SNDCTL_TMR_STOP, {B38400 opost isig icanon echo ...}) = 0
+rt_sigprocmask(SIG_SETMASK, [RT_0], NULL, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTERM, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGQUIT, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGALRM, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTSTP, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTTOU, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGTTIN, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGWINCH, {SIG_DFL}, {0x4005f0ec, [], 0}, 8) = 0
+rt_sigaction(SIGINT, {0x4005f0ec, ~[], SA_INTERRUPT}, NULL, 8) = 0
+write(1, "Exiting.\n", 9Exiting.
+)               = 9
+munmap(0x402df000, 21440)               = 0
+munmap(0x402ef000, 52704)               = 0
+munmap(0x402b8000, 159208)              = 0
+munmap(0x4001a000, 14376)               = 0
+munmap(0x40015000, 17848)               = 0
+munmap(0x40192000, 800000)              = 0
+munmap(0x40256000, 400000)              = 0
+time(NULL)                              = 951392129
+munmap(0x4001e000, 4096)                = 0
+_exit(0)                                = ?

@@ -1,0 +1,1 @@
+void pike_module_Blowfish_init(void), pike_module_Blowfish_exit(void);

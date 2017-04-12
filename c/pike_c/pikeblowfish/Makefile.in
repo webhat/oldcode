@@ -1,0 +1,9 @@
+# $Id: Makefile.in,v 1.1.1.1 2000/07/15 02:50:38 webhat Exp $
+SRCDIR=@srcdir@
+VPATH=@srcdir@:@srcdir@/../..:../..:@srcdir@/c/
+OBJS=blow.o bf_cbc.o bf_cfb64.o bf_ecb.o bf_enc.o bf_ofb64.o bf_skey.o
+#bfspeed.o
+MODULE_LDFLAGS=@LDFLAGS@ @LIBS@
+
+@dynamic_module_makefile@
+@dependencies@

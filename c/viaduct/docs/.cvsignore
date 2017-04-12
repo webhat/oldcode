@@ -1,0 +1,8 @@
+Makefile
+serial_in.h
+tty_in.h
+viaduct.1.ps
+plaap.dvi
+plaap.log
+plaap.ps
+Makefile.am.old

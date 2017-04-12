@@ -1,0 +1,18 @@
+echo $LC_COLLATE $LC_MESSAGES $LC_NUMERIC $LC_CTYPE $LC_MONETARY $LC_TIME
+export LANG=$1
+export LANGUAGE=$1_$2:$1
+export LC_ADDRESS="$1"
+export LC_ALL=$1_$2
+export LC_COLLATE=$1_$2
+export LC_CTYPE=$1_$2
+export LC_IDENTIFICATION="$1"
+export LC_MEASUREMENT="$1"
+export LC_MESSAGES=$1_$2
+export LC_MONETARY=$1_$2
+export LC_NAME="$1"
+export LC_NUMERIC=$1_$2
+export LC_PAPER="$1"
+export LC_TELEPHONE="$1"
+export LC_TIME=$1_$2
+echo $LC_COLLATE $LC_MESSAGES $LC_NUMERIC $LC_CTYPE $LC_MONETARY $LC_TIME
+

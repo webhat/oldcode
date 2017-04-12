@@ -1,0 +1,60 @@
+
+TODO
+
+	- all code should be 32b || 64b detecting
+	- all code should be reentrant and later async-safe
+	- xerror() should have an option to write to syslog
+	- xerror() should write strerror(errno) to file
+
+
+THREAD_SAFE, _REENTRANT, async-safe
+
+	To make a piece of code which has global variables or
+uses an internal table thread safe there are three
+choices:
+
+		1. return failure on async or sync calls
+		2. serialize commands (queue)
+		3. keep internal state for each thread
+
+	To make a piece of code which has global variables or
+uses an internal table reentrant there are three
+choices:
+
+		1. return failure on async or sync calls
+		2. serialize commands (queue)
+		3. keep internal state for each thread
+
+	To make a piece of code which has global variables or
+uses an internal table async-safe there is only one
+choices:
+
+		1. keep internal state for each thread
+
+	A good way to implement this is by having a world
+readable, owner writable mutex table.
+
+struct async_table
+{
+				pthread_t			owner;					/* unsigned long int */
+				unsigned int	rw:2;						/* 0 none  */
+																			/* 1 read  */
+																			/* 2 write */
+																			/* 3 r/w   */
+				void				 *data_element;
+				/* ... more data elements */
+};
+
+	The information can now be stored in a global array
+of structs, not exceeding PTHREAD_THREADS_MAX. Something
+like the line below could be written.
+
+struct async_table[PTHREAD_THREADS_MAX];
+
+	Although it should be possible to use a tidier way
+to solve this problem, such as a NULL terminated
+linked list.
+
+	pthread_t pthread_self(void);
+	pth_t pth_self(void);
+

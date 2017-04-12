@@ -1,0 +1,60 @@
+
+Garbage Collect in 'c'
+
+	This malloc implementation constists of two elements:
+
+1. a definition that wrapping malloc:
+#define gcalloc(X) gcxcalloc(__PRETTY_FUNCTION__,X)
+
+2. a linked list containing the allocated memory which
+	is free'd when the function is out of scope.
+
+x. the last element is only in the case of threaded
+	applications the linked list of memory is unique to
+	the thread.
+
+	The top off the linked list also contains the current
+path, which is why __PRETTY_FUNCTION__ is passed to the
+function `gcxalloc' it creats an allocation path from
+these details.
+
+----------------------------------------------------------------------
+
+	The second option is that all functions are called from
+within a wrapper, this has three elements:
+
+1. two definition of a wrapper:
+#define gc(X) gcptr(X); X			/* Having it called from gcprt
+															 * is also possible. */
+#define gcalloc(X) gcxalloc(X)
+
+2. a function pointer store, which stores the function
+	pointers in a linked list. Which is done by `gcptr'.
+
+3. the linked list of allocated memory.
+
+x. the last element is only in the case of threaded
+	applications the linked list of memory is unique to
+	the thread.
+
+----------------------------------------------------------------------
+
+	The third option is more complex, the path which has been
+traversed can be examined with platform specific code, it is
+then possible to see if at any point the variable goes out
+of scope. Although I have no idea how this could be done by
+using a threading model garbage collect, which follows the
+execution of the other thread, on setting or unsetting the
+stackpointer (esp) the variables should be marked ready for
+collection.
+	For global variables this could be a problem, but it
+should be possible to destinguish between a global variable
+and local variable.
+
+	This implementation shares a linked list of allocated
+memory between its main thread and garbage collect.
+
+NOTE: examine setjmp & longjmp
+
+
+Sun Jun 16 02:15:26 GMT 2002

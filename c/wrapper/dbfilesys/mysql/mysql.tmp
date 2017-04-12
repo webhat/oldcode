@@ -1,0 +1,18 @@
+create database filesys;
+
+use filesys;
+
+create table list (
+	id int(100) auto_increment NOT NULL,
+	primary key(id),
+	name VARCHAR(20),
+	u int(3),
+	g int(3),
+	indir int(100),
+	t int(1),
+	ow int(1),
+	gr int(1),
+	al int(1),
+	mod timestamp
+);
+

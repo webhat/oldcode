@@ -1,0 +1,9 @@
+Makefile
+config.cache
+config.h
+config.log
+config.status
+configure
+configure.in
+viaduct
+Makefile.am.old

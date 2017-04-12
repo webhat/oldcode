@@ -1,0 +1,25 @@
+#!/bin/bash
+
+COMP="gcc -Wall -g -ggdb -c src/pfunc.c -o src/pkill.o -DPKILL -I. -I./include"
+$COMP
+echo ${COMP}
+
+COMP="gcc -Wall -g -ggdb -c src/pfunc.c -o src/pgrep.o -I. -I./include"
+$COMP
+echo ${COMP}
+
+COMP="gcc -Wall -g -ggdb -c src/pids.c -o src/pids.o -I. -I./include"
+$COMP
+echo ${COMP}
+
+COMP="gcc -Wall -g -ggdb src/pids.o src/pgrep.o -o bin/pgrep"
+$COMP
+echo ${COMP}
+
+COMP="gcc -Wall -g -ggdb -c src/pids.c -o src/pids.o -DPKILL -I. -I./include"
+$COMP
+echo ${COMP}
+
+COMP="gcc -Wall -g -ggdb src/pids.o src/pkill.o -o bin/pkill"
+$COMP
+echo ${COMP}

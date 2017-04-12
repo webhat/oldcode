@@ -1,0 +1,18 @@
+
+check_queue:
+
+	checks if there is anything on the stack
+		+ it locks this place (rw)
+		checks if there is a thread free
+			+ locks the thread (rw)
+				run function
+					+ return
+			- return
+		- return
+
+push_stack:
+
+	check if there is anything on the end
+		+ shift
+		- lock stack & add to stack
+			+ return

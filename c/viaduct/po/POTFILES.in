@@ -1,0 +1,9 @@
+# marked to allow runtime translation of messages
+main.c
+serial/serial.c
+tap.c
+timer.c
+serial/serial.c
+socket/bind.c
+socket/getby.c
+socket/t_socket.h

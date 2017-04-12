@@ -1,0 +1,27 @@
+
+TODO: (code)
+
+	- SERIAL TO IP TO SERIAL (Check in the source, instead
+	                          of the DFLAGS, as this is more
+	                          reliable.)
+	- ENCRYPTED (BlowFish et. al.)
+	- ZLIB
+	- ETHERTAP
+	- GATEWAYS
+	- SOCKS4 & 5 support
+	- NAMED
+	- Use popt as well. (Even though I don't like it.)
+	- Use the xgettext stuff (Even though I think people
+	                          should read English)
+														(libglade-xgettext)
+
+
+TODO: (plugins)
+	- /dev/audio <-- /dev/mic
+
+TODO: (other)
+	- DEFAULT PORT, registered with IANA
+	- clean code structure
+	- clean directory code
+	- Make bin RPM's in Makefile
+

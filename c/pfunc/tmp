@@ -1,0 +1,16 @@
+/proc/306/status
+X < f_sid
+-Name:	panel
+State:	S (sleeping)
+Pid:	306
+PPid:	305
+Uid:	501	501	501	501
+Gid:	501	501	501	501
+Groups:	501 1 101 502 
+VmSize:	    6752 kB
+VmLck:	       0 kB
+VmRSS:	    3768 kB
+VmData:	     724 kB
+VmStk:-
+fail: 306(2) - |||:
+

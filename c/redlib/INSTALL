@@ -1,0 +1,12 @@
+
+INSTALL
+
+	Firstly decide where you want to install the program,
+then type:
+
+	mkdir BUILD
+	cd BUILD/
+	../configure---prefix=<path-you-want-to-install-it>
+	make
+	su -c 'make install'
+

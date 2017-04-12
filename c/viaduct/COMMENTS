@@ -1,0 +1,40 @@
+
+COMMENTS:
+
+
+Read include file sys/mount.h
+
+mknod:
+
+The arguments after NAME specify the type of file to make:
+
+`p' for a FIFO
+`b' for a block special file
+`c' for a character special file
+
+struct net_local {
+	struct sock	*nl;
+	struct net_device_stats stats;
+};
+
+
+struct device {
+				char *name; // name of module
+				char *dev_addr;	// device memory address
+				int mem_start;	// memory start
+				struct net_local *priv;			// unknown
+				int tx_queue_len;	// unknown
+				int flags;	// unknown
+				int start; // unknown
+				int tbusy; // unknown
+				char *mc_list; // multicast list
+				__u8 broadcast; // broadcast address ???
+
+/* FUNCTIONS */
+				char *open;			// open function
+				//char *close;			// close function
+				char *stop;			// stop function
+				char *hard_start_xmit; // start_xmit function
+				char *get_stats;			// open function
+				char *set_multicast_list; // set MC addresses
+};

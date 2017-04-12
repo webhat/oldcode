@@ -1,0 +1,19 @@
+
+COMMENT:
+
+	I finally wrote this because I couldn't find a
+pkill or pgrep for Linux. (Sure, I can now!)
+Anyway you know the rules, read the COPYING file
+and have fun using it.
+
+	For the interested this was tested, build and compiled on:
+
+TurboLinux release 1.0 (Kyoto)
+Mandrake release 6.1 (Helios)
+Mandrake release 7.0 (Air)
+
+Compiled but no prize:
+SunOS 5.7 Generic October 1998
+
+Copyright (c) 1999 2000  Daniel W. Crompton <redhat@rphh.org>
+

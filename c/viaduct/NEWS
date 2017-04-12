@@ -1,0 +1,20 @@
+
+NEWS:
+
+ 7 Jun 2000:
+		Produces rpms and bzip2 man files, if possible.
+Now also cheks for strings.h, but I still haven't
+bothered to try it on Solaris yet.
+
+ 4 Jun 2000:
+     Fixed all the configure and Makefiles, now they
+will work the way I want them to. I am truly a l33t
+configure file h4X0r. (c;
+		Should cross compile now too, although I'm not
+sure about it compiling on Solaris, yet... (c:
+
+24 Mar 2000:
+     Added NEWS file. Actually does basic tcp support,
+all Linux only I'm afraid. I will add at least Solaris
+2.6, 7 and 8 support. (And even 2.5 if I can find the
+CDROM.)

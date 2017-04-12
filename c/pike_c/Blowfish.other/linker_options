@@ -1,0 +1,1 @@
+modules/Blowfish/module.a -R/usr/local/lib -L/usr/local/lib -R/usr/X11R6/lib -L/usr/X11R6/lib -lc -lm

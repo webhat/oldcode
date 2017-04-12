@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Running Autoconf for ${PWD}/..."
+/usr/bin/autoscan
+/bin/mv configure.scan configure.in
+/usr/bin/autoconf
+echo "done..."
+echo ""
+echo "Now run ./configure"

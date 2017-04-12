@@ -1,0 +1,63 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(viaduct.spec)
+
+AC_CANONICAL_HOST
+AM_CONFIG_HEADER(config.h)
+
+VERSION=`cat VERSION`
+PACKAGE=viaduct
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION, no-define)
+dnl ALL_LINGUAS="nl"
+
+dnl reasonable guesses for where stuff is installed
+if test "x$prefix" = "xNONE"; then
+  prefix="/usr/local"
+else
+  prefix=$prefix
+fi
+
+dnl Checks for programs.
+AC_PROG_AWK
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AM_MAINTAINER_MODE
+AC_TYPE_SIGNAL
+dnl AC_C_BIGENDIAN
+
+dnl Checks for libraries.
+AC_CHECK_LIB(nsl, main)
+AC_CHECK_LIB(pthread, open)
+AC_CHECK_LIB(readline, main)
+AC_CHECK_LIB(resolv, res_gethostbyaddr)
+AC_CHECK_LIB(tsocks, connect)
+AC_CHECK_LIB(popt, poptFreeContext)
+AC_CHECK_LIB(z, gzopen)
+
+dnl Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS(fcntl.h sys/time.h unistd.h)
+AC_CHECK_HEADERS(arpa/inet.h asm/termbits.h asm/termios.h)
+AC_CHECK_HEADERS(netdb.h netinet/in.h popt.h)
+AC_CHECK_HEADERS(pthread.h sched.h stdarg.h)
+AC_CHECK_HEADERS(stdio.h stdlib.h string.h)
+AC_CHECK_HEADERS(strings.h)
+AC_CHECK_HEADERS(sys/stat.h sys/types.h net/sock.h)
+AC_CHECK_HEADERS(term.h time.h)
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+dnl AM_GNU_GETTEXT
+AC_C_CONST
+AC_TYPE_SIZE_T
+
+dnl Checks for library functions.
+AC_FUNC_MEMCMP
+AC_CHECK_FUNCS(socket)
+AC_CHECK_FUNCS(strtol)
+
+set > setenv.file
+
+dnl AC_OUTPUT(po/Makefile intl/Makefile)
+AC_OUTPUT(encrypt/Makefile serial/Makefile docs/Makefile socket/Makefile cross/Makefile Makefile)

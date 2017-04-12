@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gdb A.o -w --command=gdbcmd --batch | sed "s/Dump of assembler code for function//g" |sed "s/End of assembler dump.//g" > gdblist
+
+

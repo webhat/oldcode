@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export LD_LIBRARY_PATH=./
+alias ct='gcc -Wall -o test test.c -L./ -lred'
+alias cpt='cpp test.c'

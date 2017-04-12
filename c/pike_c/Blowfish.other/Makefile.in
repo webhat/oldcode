@@ -1,0 +1,9 @@
+# $Id: Makefile.in,v 1.3 1998/03/28 14:50:04 grubba Exp $
+SRCDIR=@srcdir@
+VPATH=@srcdir@:@srcdir@/../..:../..:@srcdir@/c/
+OBJS=blow.o bf_cbc.o bf_cfb64.o bf_ecb.o bf_enc.o bf_ofb64.o bf_skey.o
+#bfspeed.o
+MODULE_LDFLAGS=@LDFLAGS@ @LIBS@
+
+@dynamic_module_makefile@
+@dependencies@

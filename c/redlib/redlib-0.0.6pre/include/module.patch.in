@@ -1,0 +1,11 @@
+--- module.h	Sat Apr 13 01:17:35 2002
++++ module.h.in	Sat Apr 13 01:16:47 2002
+@@ -132,7 +132,7 @@
+ # ifdef DEBUG
+ #  define MODULE_DIR   "/usr/local/src/redlib/test"
+ # else /* DEBUG */
+-#  define MODULE_DIR   "@MODULE_CONFIG_DIR@"
++#  define MODULE_DIR   "" /* this is where you can enter the new directory */
+ # endif /* DEBUG */
+ R_EXTERN char *module_dir;				/* TODO:
+ 																 * 		write function to check which dir

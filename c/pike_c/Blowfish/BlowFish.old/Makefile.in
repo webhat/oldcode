@@ -1,0 +1,83 @@
+#
+#    Copyright (C) 1997-2000  Daniel W. Crompton <redhat@rphh.org>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+# CVSVERSION: $Id: Makefile.in,v 1.1 2000/02/14 00:54:08 redhat Exp redhat $
+
+GCC=/usr/bin/egcs
+CFLAGS=-Wall -g -O3
+LIBS= 
+DFLAGS=-DLINUX
+
+PROGS = BLOWFISH.so
+OBJS = bf_cbc.o bf_cfb64.o bf_ecb.o bf_enc.o bf_ofb64.o bf_skey.o bfspeed.o bftest.o blowfish.o
+
+all: $(PROGS)
+
+solaris:
+  DFLAGS="-DSOLARIS"
+
+openbsd: bsd
+
+freebsd: bsd
+
+bsd: all
+  DFLAGS="-DBSD"
+
+linux:
+  DFLAGS="-DLINUX"
+
+BLOWFISH.so: $(OBJS)
+	$(GCC) -c $@ $^ $(LIBS)
+
+bf_cbc.o: bf_cbc.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bf_cfb64.o: bf_cfb64.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bf_ecb.o: bf_ecb.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bf_enc.o: bf_enc.c bf_locl.h
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bf_ofb64.o: bf_ofb64.c bf_pi.h
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bf_skey.o: bf_skey.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bfspeed.o: bfspeed.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+bftest.o: bftest.c
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+blowfish.o: blowfish.c blowfish.h
+	$(GCC) -c $(CFLAGS) -DDEBUG -o $@ $<
+
+clean:
+	rm -f *.o core
+
+veryclean: clean
+	rm -f $(PROGS)
+
+very: veryclean
+
+
+
+

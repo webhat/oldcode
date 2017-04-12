@@ -1,0 +1,120 @@
+# $Id: Makefile.in,v 1.3 1998/03/28 14:50:04 grubba Exp $
+SRCDIR=/cvs/idonex/Pike/0.6/src/modules/Blowfish
+VPATH=/cvs/idonex/Pike/0.6/src/modules/Blowfish:/cvs/idonex/Pike/0.6/src/modules/Blowfish/../..:../..:/cvs/idonex/Pike/0.6/src/modules/Blowfish/c/
+OBJS=blow.o bf_cbc.o bf_cfb64.o bf_ecb.o bf_enc.o bf_ofb64.o bf_skey.o
+#bfspeed.o
+MODULE_LDFLAGS= -R/usr/local/lib -L/usr/local/lib -R/usr/X11R6/lib -L/usr/X11R6/lib  -lc -lm
+
+
+#
+# $Id: static_module_makefile.in,v 1.41 1999/05/27 08:23:34 hubbe Exp $
+#
+
+
+CC=/cvs/idonex/Pike/0.6/bin/smartlink pgcc
+CPP=pgcc -E
+AR=/usr/bin/ar
+PIKE_SRC_DIR=$(SRCDIR)/../..
+BUILD_BASE=../..
+MODULE_BASE=..
+
+PREFLAGS=-I. -I$(SRCDIR) -I$(SRCDIR)/../.. -I../.. -I. -Dpike_module_init=pike_module_$(MODNAME)_init -Dpike_module_exit=pike_module_$(MODNAME)_exit $(MODULE_CPPFLAGS) $(DEFINES) 
+CFLAGS=$(PREFLAGS) $(OTHERFLAGS) $(MODULE_CFLAGS)
+
+MAKE_FLAGS = "prefix=$(prefix)" "exec_prefix=$(exec_prefix)" "CC=$(CC)" "OTHERFLAGS=$(OTHERFLAGS)" "TMP_BINDIR=$(TMP_BINDIR)" "DEFINES=$(DEFINES)" "TMP_LIBDIR=$(TMP_LIBDIR)" "RUNPIKE=$(RUNPIKE)" "INSTALL=$(INSTALL)" "AR=$(AR)" $(MODULE_MAKE_FLAGS)
+
+all: dummy
+
+force:
+	@:;
+
+$(MODULE_ARCHIVES) ThisIsAPhonyTargetBlaBlaBla: force
+	@a=`echo $@ | sed -e 's@/[^/]*$$@@'` ; echo Making $(MODNAME)/$$a ; ( rm $$a/remake >/dev/null 2>&1 ||: ; cd $$a && ( $(MAKE) $(MAKE_FLAGS) || ( test -f remake ; $(MAKE) $(MAKE_FLAGS) ) ) ) || exit $$?
+
+dummy:	linker_options modlist_headers modlist_segment module.pmod module.a
+	@tmp="$(INSTALL_NAME)" ;\
+	if test x$$tmp = x ; then tmp="$(MODNAME)"; else :; fi ;\
+	$(INSTALL) module.pmod $(TMP_LIBDIR)/modules/$$tmp.pmod
+
+linker_options: Makefile $(MODULE_ARCHIVES)
+	echo >linker_options modules/$(MODNAME)/module.a $(MODULE_LDFLAGS)
+	@for a in '' $(MODULE_ARCHIVES) ; do \
+	  if test "x$$a" = "x"; then :; else \
+	    case "$$a" in \
+	      /*) \
+		echo $$a \
+	      ;; \
+	      *) \
+		echo modules/$(MODNAME)/$$a \
+	      ;; \
+            esac >>linker_options; \
+	  fi; \
+	done
+
+modlist_headers: Makefile
+	echo >modlist_headers "void pike_module_$(MODNAME)_init(void), pike_module_$(MODNAME)_exit(void);"
+
+modlist_segment: Makefile
+	echo >modlist_segment " ,{ \"$(MODNAME)\", pike_module_$(MODNAME)_init, pike_module_$(MODNAME)_exit } "
+
+Makefile: ../static_module_makefile $(SRCDIR)/Makefile.in $(SRCDIR)/dependencies config.status
+	CONFIG_FILES=Makefile CONFIG_HEADERS="" ./config.status
+	touch remake
+	@echo "Run make again"
+	@exit 1
+
+$(SRCDIR)/configure: $(SRCDIR)/configure.in $(PIKE_SRC_DIR)/aclocal.m4
+	cd $(SRCDIR) && autoconf --localdir=$(PIKE_SRC_DIR)
+	if [ -f $(SRCDIR)/acconfig.h ]; then \
+	  cd $(SRCDIR) && autoheader; \
+	else :; fi
+
+config.status: $(SRCDIR)/configure
+	./config.status --recheck
+
+module.pmod: Makefile
+	if [ -f $(SRCDIR)/module.pmod.in ]; then \
+	   sed -e "s/@module@/_static_modules.$(MODNAME)/" <$(SRCDIR)/module.pmod.in >module.pmod ;\
+	else \
+	  if [ -f ./module.pmod.in ]; then \
+	   sed -e "s/@module@/_static_modules.$(MODNAME)/" <./module.pmod.in >module.pmod ;\
+	  else \
+	    echo >module.pmod "inherit _static_modules.$(MODNAME);" ;\
+	  fi ;\
+	fi
+
+module.a: $(OBJS)
+	-rm -f module.a
+	$(AR) cq module.a $(OBJS)
+	-ranlib module.a
+	if test -f linker_options ; then touch linker_options ; else :; fi
+
+clean:
+	-rm -f *.o *.a *.so module.so module.pmod linker_options modlist_headers modlist_segment module_testsuite
+	for a in '' $(MODULE_SUBDIRS) ; do if test "x$$a" = "x"; then :; else echo cleaning $$a ; ( cd $$a ; $(MAKE) $(MAKE_FLAGS) clean ) ; fi ; done
+
+depend:
+	gcc -MM $(PREFLAGS) $(SRCDIR)/*.c | $(TMP_BINDIR)/fixdepends.sh $(SRCDIR)
+	for a in '' $(MODULE_SUBDIRS) ; do if test "x$$a" = "x"; then :; else echo making depend in $$a ; ( cd $$a ; $(MAKE) $(MAKE_FLAGS) depend ) ; fi ; done
+
+#verify / debug
+module_testsuite: $(SRCDIR)/testsuite.in $(REAL_TESTSUITE)
+	if test "x$(REAL_TESTSUITE)" != x ; then cp $(SRCDIR)/$(REAL_TESTSUITE) module_testsuite; else $(TMP_BINDIR)/mktestsuite $(SRCDIR)/testsuite.in >module_testsuite -DSRCDIR=$(SRCDIR); fi
+
+extra_tests: $(MODULE_TESTS)
+
+verify: module_testsuite $(MODULE_TESTS)
+	$(RUNPIKE) $(TMP_BINDIR)/test_pike.pike module_testsuite
+
+verbose_verify: module_testsuite $(MODULE_TESTS)
+	$(RUNPIKE) $(TMP_BINDIR)/test_pike.pike module_testsuite --verbose
+
+gdb_verify: module_testsuite
+	@echo >.gdbinit handle SIGUSR1 nostop noprint pass
+	@echo >>.gdbinit run -DNOT_INSTALLED -m ../../lib/master.pike $(PIKEOPTS) $(SRCDIR)/../../../bin/test_pike.pike module_testsuite -v -v -f
+	gdb ../../pike
+	@rm .gdbinit
+
+install: $(MODULE_INSTALL)
+
+

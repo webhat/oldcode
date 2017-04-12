@@ -1,0 +1,99 @@
+.\"
+.\" Copyright (C) 1997-2000  Daniel W. Crompton <redhat@rphh.org>
+.\" 
+.\" This program is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\" 
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\" 
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+.TH TAP 1 "Version 1.0: 22 Feb 2000"
+.SH NAME
+viaduct \- dev to dev communication
+.SH SYNOPSIS
+.B "viaduct -?"
+.br
+.B "viaduct -V"
+.br
+.B "viaduct [-vvv] [-ae] [-p <port>] -s <src addr> -d <dest addr>"
+.br
+.SH DESCRIPTION
+.I Viaduct
+is a program which uses features from /dev/ makes most
+(virtual) device to (virtual) device possible to control
+and route over ethernet. 
+.PP
+The program is comparible to
+.B nc
+(1), discounting the fact that any device, and not just interfaces,
+can be bound.
+.SH COMMANDS
+.IP "-a"
+Show all debug messages, includes code pointers. 
+.PP
+.IP "-d <dest addr>"
+Destination address, either in the form of an ip number and port:
+.sp
+.B "viaduct -d 10.10.0.1:20"
+Sets external destination address.
+.sp
+Or as an internal (virtual) device.
+.sp
+.B "viaduct -d /dev/midi0"
+Sets internal destination address.
+.sp
+This could also mean, as with the device eth*, that it is
+possible to redirect from a incomming device to an
+unspecified outgoing device.
+.IP "-e"
+reserved
+.IP "-p <port>"
+This option is only used if
+.B -s
+is not used, otherwise it is ignored.
+.IP "-s <src addr>"
+You can use this to specify a source from the command line,
+for (virtual) devices this is a must, but for binding to an interface this will
+define the ip that may connect. (With or without source port numbers.)
+.sp
+If no
+.B -s
+is used it is assumed that, as with
+.B nc
+(1), you bind to all interfaces.
+.I 0.0.0.0
+on a port defined with
+.B -p
+.IP "-v"
+Sets verbosity, the more
+.B "-v"
+you use the higher te debug level.
+.sp
+.IP ""
+.B "viaduct -vvv	"
+sets level 3 verbosity.
+.sp
+You can also use
+.B "-a"
+to set a verbosity level of 10.
+.sp
+.I underlined:
+
+.sp
+.SH "SEE ALSO"
+
+.SH WARNINGS
+.PP
+.SH COPYRIGHT
+Copyright (c) 1999,2000 Daniel Crompton
+.br
+Comments to: redhat@rphh.org
+

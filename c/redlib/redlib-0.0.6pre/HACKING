@@ -1,0 +1,41 @@
+
+HACKING
+
+	For a full compile of this project there are actually a number
+of obscure and less obscure libraries and headers which should
+be install.
+
+
+ENCRYPT
+
+	The most complex, inclusion wise, is the encryption. This can
+be compiled with many different actual encryption libraries, some
+adding more or less the same functionality. As the library's main
+function is to supply a constant api for all the supported
+libraries it means that some functions are taken from one or the
+other.
+	As different libraries include different functions it may be
+that one includes a cryptography which the other does not.
+libmix [1] includes only the former aes candidates, of which
+rijndael sadly was the winner. And libmcrypt [2], also a good
+library, includes all these and more.
+	gnomepgp mod [3]
+
+
+PTRACE
+
+	One of the simpler implementations, it defines a numer of
+common calls to ptrace. With the library libdisasm, which is part
+of `bastard' [4], it also includes a number of functions to
+decode machine code to a more readable form, handy checking if
+gcc's dead code elimination has been working it's wonders. dc:
+
+
+LINKS
+
+[1] http://mixtersecurity.tripod.com/
+[2] http://mcrypt.hellug.gr/
+[2] http://www.geocities.com/SiliconValley/Chip/3708/
+
+[4] http://www.sourceforge.net/projects/bastard
+

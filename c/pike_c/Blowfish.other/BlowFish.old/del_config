@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Delete files created by ./run_config ..."
+make clean
+rm -f config.cache
+rm -f config.log
+rm -f config.status
+rm -f configure
+rm -f configure.in
+rm -f Makefile
+echo "done..."

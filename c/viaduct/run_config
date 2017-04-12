@@ -1,0 +1,24 @@
+#!/bin/bash
+
+ECHO="echo -e"
+
+echo "Running Autoconf for ${PWD}/..."
+
+if [ "$VIADUCT_CODER" = "" ]; then
+	 $ECHO "So you think you're a Makefile hacker, eh? Well,"
+	 $ECHO "you'll know how to fix this then won't you?"
+	 exit
+fi
+
+
+#/usr/bin/autoscan
+#/bin/mv configure.scan configure.in
+/usr/bin/autoheader
+/usr/bin/aclocal
+#find . -type d | while read dir ; do
+	/usr/bin/automake --add-missing
+#done
+/usr/bin/autoconf
+echo "done..."
+echo ""
+echo "Now run ./configure"

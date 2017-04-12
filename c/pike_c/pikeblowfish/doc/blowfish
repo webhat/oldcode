@@ -1,0 +1,49 @@
+NAME
+	Blowfish.blowz - blowfish encryption
+
+DESCRIPTION
+	Blowfish.blowz is a builtin program written in C.
+
+SEE ALSO
+
+============================================================================
+NAME
+	create - initialize gzip packer
+
+SYNTAX
+	void create(string X)
+	or
+	object(Blowfish.blowz) create(string X)
+
+DESCRIPTION
+	This functionion is called when a new Blowfish.blowz is created.
+	If given, X should be a key which has a size in multiples of 8
+	bytes.
+
+============================================================================
+NAME
+	decrypt - decrypt data
+
+SYNTAX
+	string decrypt(string data);
+
+DESCRIPTION
+  Decrypts data using the key defined in create().
+
+SEE ALSO
+	encrypt()		create()
+
+============================================================================
+NAME
+	encrypt - encrypt data
+
+SYNTAX
+	string encrypt(string data);
+
+DESCRIPTION
+  Encrypt data using the key defined in create().
+
+SEE ALSO
+	decrypt()		create()
+
+============================================================================

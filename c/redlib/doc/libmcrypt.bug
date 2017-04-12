@@ -1,0 +1,18 @@
+limbcrypt versions prior to 2.5.5 contain a number of buffer overflow 
+vulnerabilities that stem from imporper or lacking input validation. By 
+passing a longer then expected input to a number of functions (multiple 
+functions are affected) the user can successful make libmcrypt crash.
+
+Another vulnerability is due to the way libmcrypt loads algorithms via 
+libtool. When the algorithms are loaded dynamically the each time the 
+algorithm is loaded a small (few kilobytes) of memory are leaked. In a 
+persistant enviroment (web server) this could lead to a memory exhaustion 
+attack that will exhaust all avaliable memory by launching repeated requests 
+at an application utilizing the mcrypt library.
+
+The solution to both of these problem is to upgrade to the latest release of 
+libmcrypt, 2.5.5.
+
+
+Ilia Alshanetsky
+

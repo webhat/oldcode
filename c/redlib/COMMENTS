@@ -1,0 +1,11 @@
+
+COMMENTS
+
+	This library contains all the common functions that I, aka redhat, use
+in my programs. See the documents file for manpages, tex and info docs.
+
+
+general ranting:
+
+	If somebody has fixed all the warnings you get when compiling with
+'-ansi' or '-pedantic', not in my code, in the stdinc, please tell me.

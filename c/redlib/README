@@ -1,0 +1,26 @@
+
+README
+
+	Firstly, please be sure to send me your comments and bug reports.
+Be sure to include the config.h and information on how to reproduce
+the bug. You could also try the script 'mybugreport' in the doc/
+directory. Mail to bug-redlib@rphh.org.
+	If you find something serious like a coredump, or god forbid a
+buffer overflow. Please be sure to send me as much debugging data
+as you can. At least a copy/paste of the gdb <prog> -c core with
+backtrace [bt]. Where <prog> is either the program which actually
+caused the coredump/oveflow or an example piece of code, with a
+like to download the offending code.
+	Try not to mail me with 'Help me it's broken!!!' or '1'm 3l1+3
+G1v3 m3 w@R3z!!!', if at all possible. (c;
+
+	Read HACKING for relevant information on modifying or adding
+functionality.
+
+HAVE_MODULE_H:
+	To change the module directory manually edit the file module.patch
+and patch the header file in the main include directory /usr/include
+or /usr/local/include.
+
+
+

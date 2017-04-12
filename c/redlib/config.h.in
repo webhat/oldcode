@@ -1,0 +1,66 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+/* defined if old mcrypt 2.2 is used */
+#undef LIBMCRYPT22
+
+/* defined if new mcrypt 2.4 is used */
+#undef LIBMCRYPT24
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have the `bsd' library (-lbsd). */
+#undef HAVE_LIBBSD
+
+/* Define if you have the `bz2' library (-lbz2). */
+#undef HAVE_LIBBZ2
+
+/* Define if you have the `dl' library (-ldl). */
+#undef HAVE_LIBDL
+
+/* Define if you have the `mcrypt' library (-lmcrypt). */
+#undef HAVE_LIBMCRYPT
+
+/* Define if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define if you have the `z' library (-lz). */
+#undef HAVE_LIBZ
+
+/* Define if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to `unsigned' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS

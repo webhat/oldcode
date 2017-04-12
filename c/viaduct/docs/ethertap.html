@@ -1,0 +1,104 @@
+<BASE HREF="http://voodooz.extinct.org/~poettering/projects/taptunnel/">
+<html>
+ <head>
+   <title>GISDN</title>
+ </head>
+ <body bgcolor=darkred text=white background="../../gfx/bg.png" link=gray alink=darkgray vlink=gray>
+ <h2>TapTunnel 0.22<i> for Linux 2.2</i></h2>
+
+ <p>This is the homepage of taptunnel, a TCP/IP-application, which allows to create ethernet-tunnels over the Internet or any other TCP/IP-net. It uses the new ethertap-device of the Linux kernel 2.2 and above. (I believe some 2.1-Kernels have it too.) It is not much more than a quick hack, so don't expect too much of it.</p>
+ <p>It is a single-threaded program, which can be client, stand-alone server and INETD-based-server. There is not much difference between taptunnel acting as server and as client. The connection is encrypted with the routines of the cryptography-library <a href="ftp://argeas.cs-net.gr/pub/unix/mcrypt">mcrypt</a> of <a href="mailto:nmav@i-net.paiko.gr">Nikos Mavroyanopoulos</a>. Both hosts need to authenticate itself to the other. This is why two passwords are needed for TapTunnel's work.</p>
+
+ <p><b>Usage.</b> Usage example for server (host: tapserver.bogus.edu):
+  <ul><tt>ifconfig tap0 192.168.88.88 up</tt>
+  <br><tt>taptunnel -vs -p 1980 -d /dev/tap0 -e 2 -l secret#1 -r secret#2</tt>
+  </ul>
+  <i>This means that verbosity is turned on (-v), this instance shall work as server (-s), port 1980 shall be used (-p), ethertap device '/dev/tap0' shall be used, encryption is done with TripleDES and the two secrets 'secret#1' (local, -l) and 'secret#2' (remote, -r) are used for encryption. After starting this instance, TapTunnel listens on port 1980 for inbound connections.</i>
+ </p> 
+ 
+ <p>Usage example for corresponding client:
+  <ul><tt>ifconfig tap0 192.168.88.89 up</tt>
+  <br><tt>taptunnel -vc -p 1980 -d /dev/tap0 -e 2 -l secret#2 -r secret#1 -m tapserver.bogus.edu</tt>
+  <br><tt>ping 192.168.88.88</tt></ul>
+  <i>This means mostly the same as above, but new is the switch for configuring taptunnel als client (-c) and the switch for defining the hostname of the server to connect to (-m). After starting this instance of TapTunnel, the link should work. If the ping succeeded, everything went ok.</i>
+ </p>
+ 
+ <p>Usage example for configuration with INETD. Add the following to your /etc/inetd.conf:</p>
+ <ul><pre>
+time stream tcp nowait root.root /usr/sbin/taptunnel /usr/sbin/taptunnel -i -l secret1 -r secret2 -e 2 -d /dev/tap0
+</pre></ul>
+ <i>The switch -i is used for activating INETD-support. Problem: Because the BSD-INETD has no support for limiting the number of paralell instances, the tap-device may be opened by two client at the same time. None of them will work with no error. I suggest using XINETD instead of INETD.</i>
+ </p>
+
+ <p>Usage example for configuration with XINETD. Add the following to your /etc/xinetd.conf:</p>
+  <ul><pre>
+service taptunnel
+ {
+   type = UNLISTED
+   port = 1980
+   user = root
+   group = root
+   socket_type = stream
+   protocol = tcp
+   wait = no
+   server = /usr/sbin/taptunnel
+   server_args = -i -l secret1 -r secret2 -e 2 -d /dev/tap0
+   instances = 1
+ }
+</pre></ul>
+ <i>The switch -i is used for activating XINETD-support. Important: Only one connection can be made with /dev/tap0, this is why the "instances = 1" is important.</i>
+ </p>
+
+ <p><b>Installation.</b> To run the taptunnel, you need Linux Kernel 2.2.x with compiled in ethertap-device and netlink-device-emulation. If you compile both as module you may activate autoload of the modules by adding
+  <ul><tt>alias tap0 ethertap</tt>
+  <br><tt>alias char-major-36 netlink_dev</tt></ul></p>
+  
+ <p>to your /etc/conf.modules or /etc/modules.conf.</p>
+ 
+ <p><b>Encryption.</b> The following encryption-algorithms are supported: Blowfish (0, 31.1ms), DES (1, 32.5ms), TripleDES (2, 46.2ms), 3-WAY (3, 32.2ms), GOST (4, 41.5ms), SAFER64 (6, 31.5ms), SAFER128 (7, 31.7ms), CAST128 (8, 30.8ms), TEAN (9, 32.1ms), TwoFISH (10, 31.6ms). The numbers in brackets are the encryption-ID used for the '-e'-switch. The time in 'ms' is the roundtrip-time for a ICMP-ECHO-packet (ping) over a TapTunnel-tunnel. These times where measured over a 100Mbps-Ethernet, with a Cyrix 6x86MX-233 as first host and a P133 as second host. Both running Linux 2.2.4. The Roundtrip-time without tunneling is 0.2ms. I suggest to use Blowfish-encryption, but you may choose what you want.</p>
+ <p><big><blink>I don't know why, but the encryption has been broken on some way, it is now incredibly slow. Someone should fix this!</blink></big></p>
+ 
+ <p><b>Pros and cons.</b> Advantages over other solutions like PPP over Telnet, PPTP are:
+ <ul><li>It is fast.</li>
+ <li>It carries all protocols which work with the ethernet.</li>
+ <li>You may use it as ethernet-long-distance-bridge.</li>
+ <li>It is really simple to setup.</li>
+ <li>It is free. (Published under GPL)</li>
+ <li>It has no large overhead.</li>
+ <li>It works.</li>
+ <li>No plaintext-password are sent over the net.</li>
+ <li>The connection is encrypted with heavy algorithms.</li>
+ <li>Because of INETD-support no big server-application will pollute your memory, when no connection is active.</li>
+ <li>It is for LINUX!.</li>
+ </ul></p>
+
+ <p>Disadvantages over other solutions:
+ <ul><li>There is no compression.</li>
+ <li>It is not multithread, only one connection may be made at a time. <i>Solution: Use it together with INETD.</i>
+ <li>There is not the possibility to use dynamic IP-Adresses for the tunnel. <i>What the hell do you need them for?</i></li>
+ <li>No ACLs. <i>Solution: when using with INETD ACLs are supported with tcpd. When using with XINETD the ACLs are implemented right in the superserver itself.</i></li></ul></p>
+ 
+ <p><b>Download.</b> Get the newest source-codes: <a href="taptunnel-0.22-source.tar.gz">taptunnel-0.22-source.tar.gz</a>.</p>
+ <p>Get older source-codes: <a href="taptunnel-0.211-source.tar.gz">taptunnel-0.211-source.tar.gz</a>, <a href="taptunnel-0.21-source.tar.gz">taptunnel-0.21-source.tar.gz</a>, <a href="taptunnel-0.2-source.tar.gz">taptunnel-0.2-source.tar.gz</a>, <a href="taptunnel-0.1-source.tar.gz">taptunnel-0.1-source.tar.gz</a>.</p>
+ <p>Get the mcrypt-library: <a href="ftp://argeas.cs-net.gr/pub/unix/mcrypt">ftp://argeas.cs-net.gr/pub/unix/mcrypt</a>.</p>
+
+ <p><b>History.</b> 
+ 29.12.99 Release 0.22: <b>Makefile and compatibility for new mcrypt. Updated documentation.</b><br>
+ 6.19.99 Release 0.211: <b>Some fixes.</b><br>
+ 3.29.99 Release 0.21: <b>Fix for INETD-support.</b><br>
+ 3.28.99 Release 0.2: <b>Complete Rewrite; Support for INETD; Strong encryption; Moved from C to C++.</b><br>
+ 2.6.99 Release 0.1: <b>Initial release.</b></p>
+    
+ <p><b>Compilation.</b> Just do a "make" and everything should be compiled.
+
+ <p><b>Notice:</b> You must be root to access the tap-device. (The permissions of the tap-devices are ignored.)</p>
+ <p>Development was done on Intel with RedHat 5.1 and rechecked on Debian 2.1. Some work was done to make the network-protocol system-independent, but I did never execute the program on non-Intel-machines.</p>
+
+<div align=right>
+<img src="http://www.netseek.de/cgi-bin/counter.pl?1388" border=0 width=88 height=20>
+<a href="http://de.nedstat.net/viewstat.asp?name=lennart"><img src="http://de.nedstat.net/scripts/nedstat.dll?name=lennart" border=0 alt="" nosave width=22 height=22></a>
+<IMG src="http://de.nedstat.net/scripts/referstat.dll?name=lennart&refer=" width=1 height=1 align="right">
+</DIV>
+
+</BODY>
+</HTML>
